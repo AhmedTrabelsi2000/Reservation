@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function ContactForm() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState(false);
@@ -14,6 +15,7 @@ export default function ContactForm() {
 
     console.log("Full name: ", fullname);
     console.log("Email: ", email);
+    console.log("Phone: ", phone);
     console.log("Message: ", message);
 
     const res = await fetch("api/contact", {
@@ -24,6 +26,7 @@ export default function ContactForm() {
       body: JSON.stringify({
         fullname,
         email,
+        phone,
         message,
       }),
     });
@@ -35,6 +38,7 @@ export default function ContactForm() {
     if (success) {
       setFullname("");
       setEmail("");
+      setPhone("");
       setMessage("");
     }
   };
@@ -65,6 +69,16 @@ export default function ContactForm() {
             type="text"
             id="email"
             placeholder="john@gmail.com"
+          />
+        </div>
+        <div>
+          <label htmlFor="phone">Phone number</label>
+          <input
+            onChange={(e) => setPhone(e.target.value)}
+            value={phone}
+            type="number"
+            id="phone"
+            placeholder="20100200"
           />
         </div>
 

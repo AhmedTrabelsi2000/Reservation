@@ -8,6 +8,9 @@ const contactSchema = new Schema({
     minLength: [2, "Name must be larger than 2 characters"],
     maxLength: [50, "Name must be lesser than 50 characters"],
   },
+  phone:{
+    type: Number,
+  },
 
   email: {
     type: String,
