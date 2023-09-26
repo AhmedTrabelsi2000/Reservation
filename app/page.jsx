@@ -10,8 +10,8 @@ export default function Home() {
     <br/>
     <h1 className='text-2xl font-bold'>Make a reservation and Get your ticket !</h1>
     <br/>
-    <p>Please fill the form below</p>
-    <p> And come dance with us!</p>
+    <p>Please fill the form below to book tickets. </p>
+    <p> Get a confirmation email and come dance with us!</p>
     <ContactForm/>
   </div>
   )
