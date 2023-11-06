@@ -93,7 +93,7 @@ export default function ContactForm() {
           ></textarea>
         </div>
 
-        <button className="bg-black drop-shadow-xl p-3 text-white font-bold" type="submit">
+        <button className="bg-orange-700 drop-shadow-xl p-3 text-white font-bold" type="submit">
           Send
         </button>
       </form>
